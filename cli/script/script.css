@@ -1,0 +1,64 @@
+/* Reset Css */
+*{
+	margin: 0;/*remove margens padrão*/
+	padding: 0;/*remove espaçamento padrão*/
+	box-sizing: border-box;/*inclui borda no calculo do tamanho*/
+}
+/*Corpo do site */
+body{
+	padding: 10px;/*espaço interno da página*/
+	height: 1080px;/*altura fixa do body*/
+}
+/*Container principal */
+.container{
+	display: grid;/*ativa o layout m grid*/
+	gap: 10px;/*espaçamento entre os elementos do grid*/
+	background-color: rgb(13, 17, 13);
+	padding: 10px;
+	
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-rows: 100px 500px 50px;
+
+	grid-template-areas: 
+	"box1 box1 box1"
+	"box2 box3 box4"
+	"box5 box5 box5";
+
+	align-items: center;
+	justify-content: space-between;
+	
+}
+.box{
+	background-color: rgb(187, 192, 190);
+}
+/* Divisão de cabeçalho */
+.box1{
+	grid-area: box1;
+	width:100%;
+	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+/* Divisão de centro */
+.box2, .box3, .box4{
+	height:100%;
+	padding:20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+
+}
+.box2{ grid-area: box2; background-color: purple; }
+.box3{ grid-area: box3;}
+.box3{ grid-area: box4; background-color: purple; }
+.box5{
+	grid-area: box5;
+	width:100%;
+	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

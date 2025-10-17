@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device=width,initial-scale=1.0">
+        <title>Flex Desing</title>
+        <style>
+        body{
+            font-family: arial,sans-serif;
+            background-color: #f0f0f0;
+            margin:0;
+            padding: 20px;
+
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #00f;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .item{
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            flex: 1 1 calc(33.333%-20px);
+            box-sizing: border-box;
+        }
+        .item1 {background-color:
+             #00f;flex: 1 1 100%;}
+           .item2{background-color:
+           #4CAF50;flex: 1 1 300px;height: 300px;
+            }
+            .item3{background-color:
+            #00f;flex: 2 1 300px;height: 300px;
+              }   
+    /*.item4{background-color:
+    #9b59b6; flex 1 1 20 %
+    }  
+     .item5{background-color:
+    #1abc9c; flex: 1 1 33,333%;heigth:500px
+     }
+     .item6{background-color: 
+     #bc1a73;flex: 1 1 48%;}*/
+   
+    .item7{background-color:
+         #4CAF50;flex: 1 1 25%;
+     }
+       @media(max-width:768px){
+    .item {
+       flex: 1 1 calc(50% - 20px);
+    }
+}
+ </style>
+    </head>
+    <body>
+    <div class="container">
+    <div class="item item 1">CABEÇALHO</div>
+
+    <div class="item item2"><img src="img.png" alt="rapaz veja"></div>
+    <div class="item item2">item
+    2</div>
+   <div class="item item2">item
+    2</div>
+   <div class="item item2">item
+    2</div>
+    <div style ="display: flex;gap:10px;width: 100%;">
+        <div class="item item2">item
+    3</div>
+<div class="item item2">item
+    3</div>
+</div>
+<div class="item item2">item
+    2</div>
+<div class="item item2">item
+    2</div>
+<div class="item item2">item
+    2</div>
+<div class="item item2">item
+    2</div>
+     
+    <div class="item item1">RODAPÉ</div>
+ </div>
+  </body>   
+    </html>
